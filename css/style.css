@@ -1,0 +1,131 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+canvas{
+  display:block;
+}
+body{
+  font-family:'Times New Roman', Times, serif;
+}
+/* ---- stats.js ---- */
+#fps{
+    display:none !important;
+}
+/* ---- particles.js container ---- */
+#particles-js{
+  width: 100%;
+  min-height: 80vh;
+  background-image: url("../images/top-banner-dark.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.logo{
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+ .sidebar-icon{
+  position: absolute;
+  top: 40px;
+  right:50px;
+}
+.sidebar-icon i{
+  font-size: 40px;
+}
+.profile-section{
+  position: absolute;
+  top: 40%;
+}
+.user-profile{
+    text-align: start;
+    color: #fff;
+}
+.user-profile h1{
+    font-size: 3rem;
+}
+@media screen and (max-width: 1200px) {
+
+.profile-section {
+    position: absolute;
+    top: 30%;
+}
+  .user-profile h1 {
+      font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+  .user-profile h1 {
+      font-size: 3rem;
+  }
+  #particles-js{
+    min-height: 100vh;
+  }
+  .sidebar-icon i {
+    font-size: 30px;
+}
+.sidebar-icon {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+}
+.header-icon {
+  padding-right: 21px;
+}
+.header-icon li a i {
+  font-size: 13px;
+  color: #fff;
+  padding: 10px 10px;
+}
+}
+@media screen and (max-width: 486px) {
+  .user-profile h1 {
+      font-size: 1.5rem;
+  }
+  .user-profile h4{
+    font-size: 12px;
+  }
+  .header-icon li a i {
+   display: none;
+}
+  .p-button{
+    display: block !important;
+  }
+  .button-group{
+    display: block !important;
+  }
+  .button-group a{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .About-section .about-image{
+    display: none;
+  }
+}
