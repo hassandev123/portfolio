@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- fontawesome cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         />
+      <!-- Animate css cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         />
+      <!-- OWL CAROUSEL CSS LINKS -->
+      <!-- Basic stylesheet -->
+      <link rel="stylesheet" href="owl-carousel//owl.carousel.css">
+      <!-- Default Theme -->
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!-- jquery cdn --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> -->
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style2.css">
+      <link rel="stylesheet" href="css/navbar.css">
+
+      <title>Hello, world!</title>
+      
+   <script>
+var loaded = false;
+var time = 3000;
+$(function() {
+    $(window).on('load', function () {
+       loaded = true;
+       
+    });
+    setTimeout(function() { 
+        if(!loaded) {
+            window.location.reload();
+        }  
+        $('.loader').css("display", "none");
+    },time);
+}) 
+  </script> 
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
+   </head>
+   <body>
+            <div class="loader" id="preloader">
+               <div class="cube-wrapper">
+                  <div class="cube-folding"> 
+                     <span class="leaf1"></span>
+                      <span class="leaf2"></span>
+                      <span class="leaf3"></span>
+                      <span class="leaf4"></span>
+                  </div>
+                     <span class="loading" data-name="Loading">Loading</span>
+               </div>
+            </div>
+<!-- 
+      <div class="container-fluid px-0">
+         <div class="logo"><img src="images/h-logo.png" width="120px" alt="">
+         </div>
+         <div class="sidebar-icon d-flex">
+            <ul class="d-flex header-icon">
+               <li><a href=""><i class="fab fa-twitter"></i></a></li>
+               <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+               <li><a href=""><i class="fab fa-instagram"></i></a></li>
+               <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <p class="show"><i class="fas fa-bars prominent-color"></i></p>
+         </div>
+         <div class="mobile-navigation d-none">
+            <div class="d-block">
+               <h1 class="hide"><i class="fas fa-times text-white"></i></h1>
+               <div class="user-dp pt-5 d-flex justify-content-center">
+                  <div class="profile-img">
+                     <img src="images/profile-pic.jpeg" alt="">
+                  </div>
+               </div>
+               <div class="user-intro pt-5 px-5">
+                  <h2 class="text-white main-family fs-1 text-center">HASSAN <span class="prominent-color">KHAN</span></h2>
+                  <h4 class="main-family text-white text-center">Web Developer</h4>
+               </div>
+               <div class="sidebar-items">
+                  <ul>
+                     <li><a href="">About</a></li>
+                     <li><a href="">Portfolio</a></li>
+                     <li><a href="">Services</a></li>
+                     <li><a href="">Contact</a></li>
+                     <li><a href="">Projects</a></li>
+                  </ul>
+               </div>
+               <div class="sidebar-footer-icon d-flex justify-content-center flex-column align-items-center">
+                  <h1 class="prominent-color main-family fs-1 py-3 text-start">
+                  :FOLLOW <span class="text-white">ME</span><i class="fas fa-hand-right"></i></h2>
+                  <ul class="d-flex p-3 justify-content-around w-75">
+                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                     <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- =======================================about section================================= -->
+      
+      <div class="container-fluid px-0  About-section bg-about" id="about">
+         <img src="images/dots.png" class="about-image" alt="">
+         <div class="container py-5">
+            <div class="row m-0 d-flex pt-4 questo">
+               <div class="col-md-12">
+                <h2 class="heading-family text-center">ABOUT ME</h2>
+                  <h1 class="text-center pl-4 pt-5 main-family text-white main-heading fw-bold">WHO <span class="prominent-color">I'M
+                     </span> 
+                  </h1>
+               </div>
+               <div class="col-md-6 py-5 d-flex justify-content-center flex-column">
+                  <h2 class="main-family text-white Text-start">About <span class="prominent-color">Me</span></h2>
+                  <ul class="text-white">
+                     <li class="prominent-color"><span class="text-white"> Former front end Developer At IT HUB</span></li>
+                     <li class="prominent-color"><span class="text-white"> Former front end Developer at ALLWEBSCRIPT PVT,
+                        LTD</span>
+                     </li>
+                     <li class="prominent-color"><span class="text-white"> Former Php Developer at TECH & DEVS</span></li>
+                     <li class="prominent-color"><span class="text-white"> Working As Joomla Developer at
+                        CreativetechSolutions</span>
+                     </li>
+                  </ul>
+                  <h3 class="main-family text-white pb-3">Lorem, ipsum dolor sit amet consectetur </h3>
+                  <a href="" class="text-white  my-4"><span class="prominent-color">DOWNLOAD</span> CV <i
+                     class="fas fa-download prominent-color"></i></a>
+               </div>
+               <div class="col-md-6 position-relative d-flex justify-content-center align-items-center py-4">
+                  <div class="about-img my-5">
+                     <img src="images/about-pic.png" width="100%" alt="">
+                  </div>
+                  <h1 class="dots-before text-white">6 YEARS OF <span class="prominent-color">EXPERIENCE</span> </h1>
+               </div>
+            </div>
+         </div>
+      </div> 
+      <!-- scripts -->
+      <script>
+         $(document).ready(function() {
+             $(".show ").click("slow ", function() {
+                 $(".mobile-navigation ").removeClass("d-none ");
+                 $(".mobile-navigation ").addClass("d-block ");
+             });
+         });
+         $(document).ready(function() {
+             $(".hide ").click("slow ", function() {
+                 $(".mobile-navigation ").removeClass("d-block ");
+                 $(".mobile-navigation ").addClass("d-none ");
+             });
+         });
+         
+      </script>
+      <script>
+         $(".questo").hover(function(e) {
+             $(this).addClass('animate__animated animate__zoomIn animate__delay-0.5s animate__repeat-0', e.type === 'mouseenter');
+         });
+      </script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+      <!-- Include js plugin -->
+      <script src="owl-carousel/owl.carousel.js"></script>
+   </body>
+</html>
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+</html>
