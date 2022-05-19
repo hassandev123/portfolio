@@ -208,6 +208,12 @@
     }
     /* ==========================About seciton css=================================== */
     
+    .bg-about {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(82, 81, 81, 0.61)), url("../images/about-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     .About-section .about-image {
         position: absolute;
         top: center;
