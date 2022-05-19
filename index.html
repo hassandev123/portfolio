@@ -1,252 +1,451 @@
 <!doctype html>
 <html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- fontawesome cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         />
+      <!-- Animate css cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         />
+      <!-- OWL CAROUSEL CSS LINKS -->
+      <!-- Basic stylesheet -->
+      <link rel="stylesheet" href="owl-carousel//owl.carousel.css">
+      <!-- Default Theme -->
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!-- jquery cdn --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style2.css">
+      <link rel="stylesheet" href="css/navbar.css">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- Animate css cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- jquery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Hello, world!</title>
-</head>
+      <title>Hello, world!</title>
+      
+   <script>
+var loaded = false;
+var time = 3000;
+$(function() {
+    $(window).on('load', function () {
+       loaded = true;
+       
+    });
+    setTimeout(function() { 
+        if(!loaded) {
+            window.location.reload();
+        }  
+        $('.loader').css("display", "none");
+    },time);
+});
+ // When the user scrolls the page, execute myFunction 
+ window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    } 
+  </script> 
+   </head>
+   <body>
+      <script>
+      
+         $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                //Basic Speeds
+         slideSpeed : 200,
+         paginationSpeed : 800,
+         
+         //Autoplay
+         autoPlay : false,
+         goToFirst : true,
+         
+         goToFirstSpeed : 1000,
+         
+         // Navigation
+         navigation : true,
+         pagination : true,
+         dots : true,
+         paginationNumbers: false,
+         
+         // Responsive
+         responsive: true,
+         items : 3,
+         itemsDesktop : [1199,3],
+         itemsDesktopSmall : [980,3],
+         itemsTablet: [768,2],
+         itemsMobile : [479,1]
+         
+            });
+         $( ".owl-prev").html('<i class="fa-solid fa-arrow-left-long"></i>');
+         $( ".owl-next").html('<i class="fa-solid fa-arrow-right-long"></i>');
+            });
+      </script>
+            <div class="loader" id="preloader">
+               <div class="cube-wrapper">
+                  <div class="cube-folding"> 
+                     <span class="leaf1"></span>
+                      <span class="leaf2"></span>
+                      <span class="leaf3"></span>
+                      <span class="leaf4"></span>
+                  </div>
+                     <span class="loading" data-name="Loading">Loading</span>
+               </div>
+            </div>
 
-<body>
-    <div class="container-fluid px-0">
-        <div class="banner" id="particles-js"></div>
-        <div class="logo"><img src="images/h-logo.png" width="120px" alt="">
-        </div>
-        <div class="sidebar-icon d-flex">
+      <div class="container-fluid px-0" id="home">
+               <!-- ========================================loader html ============================ -->
+            <!-- ========================================end loader html ============================ -->
+
+         <div class="banner" id="particles-js"></div>
+         <div class="logo"><img src="images/h-logo.png" width="120px" alt="">
+         </div>
+         <div class="sidebar-icon d-flex">
             <ul class="d-flex header-icon">
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+               <li><a href=""><i class="fab fa-twitter"></i></a></li>
+               <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+               <li><a href=""><i class="fab fa-instagram"></i></a></li>
+               <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
             <p class="show"><i class="fas fa-bars prominent-color"></i></p>
-        </div>
-
-        <div class="mobile-navigation d-none">
+         </div>
+         <div class="mobile-navigation d-none">
             <div class="d-block">
-                <h1 class="hide"><i class="fas fa-times text-white"></i></h1>
-                <div class="user-dp pt-5 d-flex justify-content-center">
-                    <div class="profile-img">
-                        <img src="images/profile-pic.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="user-intro pt-5 px-5">
-                    <h2 class="text-white main-family fs-1 text-center">HASSAN <span class="prominent-color">KHAN</span></h2>
-                    <h4 class="main-family text-white text-center">Web Developer</h4>
-                </div>
-                <div class="sidebar-items">
-                    <ul>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Portfolio</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="sidebar-footer-icon d-flex justify-content-center flex-column align-items-center">
-                    <h1 class="prominent-color main-family fs-1 py-3 text-start">:FOLLOW <span class="text-white">ME</span><i class="fas fa-hand-right"></i></h2>
-                        <ul class="d-flex p-3 justify-content-around w-75">
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                </div>
+               <h1 class="hide"><i class="fas fa-times text-white"></i></h1>
+               <div class="user-dp pt-5 d-flex justify-content-center">
+                  <div class="profile-img">
+                     <img src="images/profile-pic.jpeg" alt="">
+                  </div>
+               </div>
+               <div class="user-intro pt-5 px-5">
+                  <h2 class="text-white main-family fs-1 text-center">HASSAN <span class="prominent-color">KHAN</span></h2>
+                  <h4 class="main-family text-white text-center">Web Developer</h4>
+               </div>
+               <div class="sidebar-items">
+                  <ul>
+                     <li><a href="">About</a></li>
+                     <li><a href="">Portfolio</a></li>
+                     <li><a href="">Services</a></li>
+                     <li><a href="">Contact</a></li>
+                     <li><a href="">Projects</a></li>
+                  </ul>
+               </div>
+               <div class="sidebar-footer-icon d-flex justify-content-center flex-column align-items-center">
+                  <h1 class="prominent-color main-family fs-1 py-3 text-start">
+                  :FOLLOW <span class="text-white">ME</span><i class="fas fa-hand-right"></i></h2>
+                  <ul class="d-flex p-3 justify-content-around w-75">
+                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                     <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+               </div>
             </div>
-        </div>
-        <div class="row m-0 profile-section d-flex justify-content-center pl-4">
+         </div>
+         <div class="row m-0 profile-section d-flex justify-content-center pl-4">
             <div class="user-profile col-md-10 ">
-                <h2 class="text-start pl-4 main-family text-center mb-3"><i class="fas fa-handshake prominent-color pe-5"></i> HI THERE!</h2>
-                <h1 class="text-start pl-4 main-family">AWESOME SOLUTIONS <span class="prominent-color">FOR YOUR BUSINESS</span>
-                </h1>
-                <h4 class="pl-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt itaque ad sapiente nulla corrupti nam placeat quis reiciendis at repudiandae quibusdam, nihil fugit rerum ratione, architecto blanditiis dolores dolor illum sed
-                    molestias, aliquam atque. </h4>
-                <div class="p-button py-3 py-xl-4 pl-4 d-flex align-items-center justify-content-center">
-                    <div class="button-group py-xs-5 py-sm-4 py-lg-3 py-xl-5"><a href="" class=" my-4 Yellow-button py-2 px-4 me-3">About me <i class="fas fa-user"></i></a> <a href="" class=" my-0 my-lg-4 white-button py-2 px-4">Get Started <i class="fas fa-chevron-right"></i><i
-                class="fas fa-chevron-right"></i></a></div>
+               <h2 class="text-start pl-4 main-family text-center mb-3"><i class="fas fa-handshake prominent-color pe-5"></i> HI THERE!</h2>
+               <h1 class="text-start pl-4 main-family">AWESOME SOLUTIONS <span class="prominent-color">FOR YOUR BUSINESS</span>
+               </h1>
+               <h4 class="pl-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt itaque ad sapiente nulla corrupti nam placeat quis reiciendis at repudiandae quibusdam, nihil fugit rerum ratione, architecto blanditiis dolores dolor illum sed
+                  molestias, aliquam atque. 
+               </h4>
+               <div class="p-button py-3 py-xl-4 pl-4 d-flex align-items-center justify-content-center">
+                  <div class="button-group py-xs-5 py-sm-4 py-lg-3 py-xl-5"><a href="" class=" my-4 Yellow-button py-2 px-4 me-3">About me <i class="fas fa-user"></i></a> <a href="" class=" my-0 my-lg-4 white-button py-2 px-4">Get Started <i class="fas fa-chevron-right"></i><i
+                     class="fas fa-chevron-right"></i></a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section class="content">
+         <!-- ===========================================navbar======================================= -->
+         <div class="container-fluid px-0  bg-dark nav-floating d-block">
+            <nav class="Navbar bg-dark">
+                <div class="Navbar-brand">
+                  <img src="images/h-logo.png" width="120px" alt="">
                 </div>
+                <ul class="d-flex justify-content-end">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="">Testimonial</a></li>
+                    <li><a href="">Contact</a></li>
+                  </ul>
+            </nav>
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
             </div>
         </div>
-    </div>
-
-    <!-- =======================================about section================================= -->
-    <div class="container-fluid px-0 position-relative About-section bg-dark">
-        <img src="images/dots.png" class="about-image" alt="">
-        <div class="container py-5">
+         <!-- ===========================================navbar======================================= -->
+      <!-- =======================================about section================================= -->
+      
+      <div class="container-fluid px-0 About-section bg-about" id="about">
+         <img src="images/dots.png" class="about-image" alt="">
+         <div class="container py-5">
             <div class="row m-0 d-flex pt-4 questo">
-                <div class="col-md-12">
-                    <h1 class="text-center pl-4 main-family text-white main-heading fw-bold">WHO <span class="prominent-color">I'M
-            </span> </h1>
-                </div>
-                <div class="col-md-6 py-5 d-flex justify-content-center flex-column">
-                    <h2 class="main-family text-white Text-start">About <span class="prominent-color">Me</span></h2>
-                    <ul class="text-white">
-                        <li class="prominent-color"><span class="text-white"> Former front end Developer At IT HUB</span></li>
-                        <li class="prominent-color"><span class="text-white"> Former front end Developer at ALLWEBSCRIPT PVT,
-                LTD</span></li>
-                        <li class="prominent-color"><span class="text-white"> Former Php Developer at TECH & DEVS</span></li>
-                        <li class="prominent-color"><span class="text-white"> Working As Joomla Developer at
-                CreativetechSolutions</span></li>
-                    </ul>
-                    <h3 class="main-family text-white pb-3">Lorem, ipsum dolor sit amet consectetur </h3>
-                    <a href="" class="text-white  my-4"><span class="prominent-color">DOWNLOAD</span> CV <i
-              class="fas fa-download prominent-color"></i></a>
-                </div>
-                <div class="col-md-6 position-relative d-flex justify-content-center align-items-center py-4">
-                    <div class="about-img my-5">
-                        <img src="images/about-pic.jpeg" width="100%" alt="">
-                    </div>
-                    <img src="images/rectangle-dots.png" class="dots-before" alt="">
-                    <img src="images/rectangle-dots.png" class="dots-after" alt="">
-                </div>
+               <div class="col-md-12">
+                <h2 class="heading-family text-center">ABOUT ME</h2>
+                  <h1 class="text-center pl-4 pt-5 main-family text-white main-heading fw-bold">WHO <span class="prominent-color">I'M
+                     </span> 
+                  </h1>
+               </div>
+               <div class="col-md-6 py-5 d-flex justify-content-center flex-column">
+                  <h2 class="main-family text-white Text-start">About <span class="prominent-color">Me</span></h2>
+                  <ul class="text-white">
+                     <li class="prominent-color"><span class="text-white"> Former front end Developer At IT HUB</span></li>
+                     <li class="prominent-color"><span class="text-white"> Former front end Developer at ALLWEBSCRIPT PVT,
+                        LTD</span>
+                     </li>
+                     <li class="prominent-color"><span class="text-white"> Former Php Developer at TECH & DEVS</span></li>
+                     <li class="prominent-color"><span class="text-white"> Working As Joomla Developer at
+                        CreativetechSolutions</span>
+                     </li>
+                  </ul>
+                  <h3 class="main-family text-white pb-3">Lorem, ipsum dolor sit amet consectetur </h3>
+                  <a href="" class="text-white  my-4"><span class="prominent-color">DOWNLOAD</span> CV <i
+                     class="fas fa-download prominent-color"></i></a>
+               </div>
+               <div class="col-md-6 position-relative d-flex justify-content-center align-items-center py-4">
+                  <div class="about-img my-5">
+                     <img src="images/about-pic.png" width="100%" alt="">
+                  </div>
+                  <h1 class="dots-before text-white">6 YEARS OF <span class="prominent-color">EXPERIENCE</span> </h1>
+               </div>
             </div>
-        </div>
-    </div>
-    <!-- ========================================ends================================= -->
-    <!-- ===================================Services section starts here============================================= -->
-    <div class="container-fluid px-0 About-section bg-services">
-        <div class="container py-5">
+         </div>
+      </div>
+      <!-- ========================================ends================================= -->
+      <!-- ===================================Services section starts here============================================= -->
+      <div class="container-fluid px-0 About-section bg-services " id="services">
+         <div class="container py-5 questo">
+            <div class="row m-0 d-flex pt-4 ">
+               <div class="col-md-12 ">
+                   <h2 class="heading-family text-center">SERVICES</h2>
+                  <h1 class="text-center pl-4 pt-5 main-family text-white main-heading fw-bold ">WHAT WE <span class="text-white ">OFFERS </span></h1>
+               </div>
+               <div class="col-md-12 py-5 d-flex justify-content-center flex-column ">
+                  <h3 class="service-desc text-white pb-3 text-center">Do you want to run Your Bussiness online? This is the right place to run your Bussiness all over the world. We will Introduce your bussiness in the advance and digital world.</h3>
+               </div>
+            </div>
+            <div class="row position-relative py-4 {{--owl-carousel owl-theme--}}">
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fab fa-wordpress "></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Wordpress</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-wordpress text-warning text-center fs-1 "> </i> Wordpress</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fab fa-joomla "></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Joomla</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-joomla text-warning text-center fs-1 "> </i> JOOMLA</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fab fa-css3"></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Responsive Designs</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-css3 text-warning text-center fs-1 "> </i> HTML&CSS</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fa-solid fa-headset"></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">24/7 SUPPORT</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fa-solid fa-headset prominent-color"></i> HTML&CSS</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fa-solid fa-globe"></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">DOMAINS</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fa-solid fa-globe prominent-color"></i> HTML&CSS</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 p-3 d-flex justify-content-center align-items-center">
+                  <div class="service-card position-relative ">
+                     <h4 class="image prominent-color "><i class="fa-solid fa-database"></i></h4>
+                     <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">HOSTING</h1>
+                     <div class="overlay ">
+                        <div class="text ">
+                           <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fa-solid fa-database prominent-color"></i> HTML&CSS</h1>
+                           <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-service row justify-content-center">
+               <a href="" class="btn btn-outline-warning btn-large fw-bold">GET OUR SERVICES</a>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid px-0 skills bg-skills" id="team">
+         <div class="container py-5">
             <div class="row m-0 d-flex pt-4 questo">
-                <div class="col-md-12 ">
-                    <h1 class="text-center pl-4 main-family prominent-color main-heading fw-bold ">WHAT WE <span class="text-white ">OFFERS </span></h1>
-                </div>
-                <div class="col-md-6 py-5 d-flex justify-content-center flex-column ">
-                    <h2 class="main-family text-white Text-start ">Our <span class="prominent-color ">Services</span></h2>
-                    <h3 class="main-family text-white pb-3 ">Do you want to run Your Bussiness online? This is the right place to run your Bussiness all over the world. We will Introduce your bussiness in the advance and digital world.</h3>
-                    <h4><a href="" class="text-white my-4 Yellow-button fs-7 px-2 py-1"><span>Start a Project</span><i
-                        class="fas fa-chevron-right px-2 fs-7"></i></a></h4>
-                </div>
-                <div class="col-md-6 position-relative d-flex justify-content-center align-items-center py-4 ">
-                    <div class="row ">
-                        <div class="col-md-6 p-3 d-flex justify-content-center align-items-center">
-                            <div class="service-card position-relative ">
-                                <h4 class="image prominent-color "><i class="fab fa-wordpress "></i></h4>
-                                <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Wordpress</h1>
-                                <div class="overlay ">
-                                    <div class="text ">
-                                        <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-wordpress text-warning text-center fs-1 "> </i> Wordpress</h1>
-                                        <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
+               <div class="col-md-12 ">
+                  <h2 class="heading-family text-center">TEAM</h2>
+                  <h1 class="text-center pl-4 pt-5 main-family prominent-color main-heading fw-bold ">MY<span class="text-white "> TEAM </span></h1>
+               </div>
+               <div class="col-md-12 position-relative d-flex justify-content-center align-items-center py-4 ">
+                  <div class="row owl-carousel owl-theme">
+                     <div class=" p-3 d-flex justify-content-center align-items-center">
+                        <div class="service-card position-relative " style="height: unset;">
+                           <img src="images/Muhammad Azeem.png" class="w-100" alt="">
+                           <div class="overlay ">
+                              <div class="text ">
+                                 <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family text-center"><i class="fa-solid fa-link prominent-color"></i> <i class="fa-solid fa-envelope prominent-color"></i></h1>
+                              </div>
+                           </div>
                         </div>
-                        <div class="col-md-6 p-3 d-flex justify-content-center align-items-center">
-                            <div class="service-card position-relative ">
-                                <h4 class="image prominent-color "><i class="fab fa-joomla "></i></h4>
-                                <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Joomla</h1>
-                                <div class="overlay ">
-                                    <div class="text ">
-                                        <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-joomla text-warning text-center fs-1 "> </i> JOOMLA</h1>
-                                        <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                     <div class=" p-3 d-flex justify-content-center align-items-center">
+                        <div class="service-card position-relative " style="height: unset;">
+                           <img src="images/Hassan Khan.png" class="w-100" alt="">
+                           <div class="overlay ">
+                              <div class="text ">
+                                 <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family text-center"><i class="fa-solid fa-link prominent-color"></i> <i class="fa-solid fa-envelope prominent-color"></i></h1>
+                              </div>
+                           </div>
                         </div>
-                        <div class="col-md-6 p-3 d-flex justify-content-center align-items-center">
-                            <div class="service-card position-relative ">
-                                <h4 class="image prominent-color "><i class="fab fa-css3"></i></h4>
-                                <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Responsive Web Designs</h1>
-                                <div class="overlay ">
-                                    <div class="text ">
-                                        <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><i class="fab fa-css3 text-warning text-center fs-1 "> </i> HTML&CSS</h1>
-                                        <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                     <div class=" p-3 d-flex justify-content-center align-items-center">
+                        <div class="service-card position-relative " style="height: unset;">
+                           <img src="images/Hassan Khan.png" class="w-100" alt="">
+                           <div class="overlay ">
+                              <div class="text ">
+                                 <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family text-center"><i class="fa-solid fa-link prominent-color"></i> <i class="fa-solid fa-envelope prominent-color"></i></h1>
+                              </div>
+                           </div>
                         </div>
-                        <div class="col-md-6 p-3 d-flex justify-content-center align-items-center">
-                            <div class="service-card position-relative ">
-                                <h4 class="image prominent-color "><img src="images/support.png " alt=" "></h4>
-                                <h1 class="text-center prominent-color main-family w-100 fs-1 font-weight-bold ">Responsive Web Designs</h1>
-                                <div class="overlay ">
-                                    <div class="text ">
-                                        <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family "><img src="images/support.png " width="25px " alt=" "> HTML&CSS</h1>
-                                        <h1 class="text-secondary "><span>Responsive web design is about creating web pages that look good on all devices!A responsive web design will automatically adjust for different screen sizes and viewports.</span>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                     <div class=" p-3 d-flex justify-content-center align-items-center">
+                        <div class="service-card position-relative " style="height: unset;">
+                           <img src="images/Hassan Khan.png" class="w-100" alt="">
+                           <div class="overlay ">
+                              <div class="text ">
+                                 <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family text-center"><i class="fa-solid fa-link prominent-color"></i> <i class="fa-solid fa-envelope prominent-color"></i></h1>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                     <div class=" p-3 d-flex justify-content-center align-items-center">
+                        <div class="service-card position-relative " style="height: unset;">
+                           <img src="images/Hassan Khan.png" class="w-100" alt="">
+                           <div class="overlay ">
+                              <div class="text ">
+                                 <h1 class="prominent-color text-capitalize fs-1 font-weight-bold main-family text-center"><i class="fa-solid fa-link prominent-color"></i> <i class="fa-solid fa-envelope prominent-color"></i></h1>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <!-- =================================Scripts for particles==================================== -->
-        <!-- scripts -->
-        <script src="particles.js "></script>
-        <script src="js/app.js "></script>
-
-        <!-- stats.js -->
-        <script src="js/lib/stats.js "></script>
-        <script>
-            var count_particles, stats, update;
-            stats = new Stats;
-            stats.setMode(0);
-            stats.domElement.style.position = 'absolute';
-            stats.domElement.style.left = '0px';
-            stats.domElement.style.top = '0px';
-            document.body.appendChild(stats.domElement);
-            count_particles = document.querySelector('.js-count-particles');
-            update = function() {
-                stats.begin();
-                stats.end();
-                // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                //   count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-                // }
-                requestAnimationFrame(update);
-            };
-            requestAnimationFrame(update);
-        </script>
-        <script>
-            $(document).ready(function() {
-                $(".show ").click("slow ", function() {
-                    $(".mobile-navigation ").removeClass("d-none ");
-                    $(".mobile-navigation ").addClass("d-block ");
-                });
-            });
-            $(document).ready(function() {
-                $(".hide ").click("slow ", function() {
-                    $(".mobile-navigation ").removeClass("d-block ");
-                    $(".mobile-navigation ").addClass("d-none ");
-                });
-            });
-        </script>
-        <script>
-            $(".questo").hover(function(e) {
-                $(this).addClass('animate__animated animate__zoomIn animate__delay-0.5s animate__repeat-0', e.type === 'mouseenter');
-            });
-        </script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-</body>
-
-</html>
-</script>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-</body>
-
+         </div>
+      </div>
+   </section>
+      <!-- =================================Scripts for particles==================================== -->
+      <!-- scripts -->
+      <script src="particles.js "></script>
+      <script src="js/app.js "></script>
+      <!-- stats.js -->
+      <script src="js/lib/stats.js "></script>
+      <script>
+         var count_particles, stats, update;
+         stats = new Stats;
+         stats.setMode(0);
+         stats.domElement.style.position = 'absolute';
+         stats.domElement.style.left = '0px';
+         stats.domElement.style.top = '0px';
+         document.body.appendChild(stats.domElement);
+         count_particles = document.querySelector('.js-count-particles');
+         update = function() {
+             stats.begin();
+             stats.end();
+             // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+             //   count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+             // }
+             requestAnimationFrame(update);
+         };
+         requestAnimationFrame(update);
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(".show ").click("slow ", function() {
+                 $(".mobile-navigation ").removeClass("d-none ");
+                 $(".mobile-navigation ").addClass("d-block ");
+             });
+         });
+         $(document).ready(function() {
+             $(".hide ").click("slow ", function() {
+                 $(".mobile-navigation ").removeClass("d-block ");
+                 $(".mobile-navigation ").addClass("d-none ");
+             });
+         });
+         
+      </script>
+      <script>
+         $(".questo").hover(function(e) {
+             $(this).addClass('animate__animated animate__zoomIn animate__delay-0.5s animate__repeat-0', e.type === 'mouseenter');
+         });
+//          $(".content").mouseover(function(){
+//   $(".nav-floating").toggleClass("d-block");
+// });
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// window.onscroll = function() {scrollFunction(),myFunction()};
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     document.getElementsByClassName("nav-floating").style.top = "0";
+//   } else {
+//     document.getElementsByClassName("nav-floating").style.top = "-50px";
+//   }
+// }
+//       </script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+      <!-- Include js plugin -->
+      <script src="owl-carousel/owl.carousel.js"></script>
+   </body>
 </html>
