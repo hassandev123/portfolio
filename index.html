@@ -17,8 +17,7 @@
       <link rel="stylesheet" href="owl-carousel//owl.carousel.css">
       <!-- Default Theme -->
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-      <!-- jquery cdn --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <!-- custom css -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/style2.css">
@@ -27,20 +26,23 @@
       <title>Hello, world!</title>
       
    <script>
-var loaded = false;
-var time = 3000;
-$(function() {
-    $(window).on('load', function () {
-       loaded = true;
+      $(document).ready(function () {
+         $('.loader').css('display','none');
+      });
+// var loaded = false;
+// var time = 3000;
+// $(function() {
+//     $(window).on('load', function () {
+//        loaded = true;
        
-    });
-    setTimeout(function() { 
-        if(!loaded) {
-            window.location.reload();
-        }  
-        $('.loader').css("display", "none");
-    },time);
-});
+//     });
+//     setTimeout(function() { 
+//         if(!loaded) {
+//             window.location.reload();
+//         }  
+//         $('.loader').css("display", "none");
+//     },time);
+// });
  // When the user scrolls the page, execute myFunction 
  window.onscroll = function() {myFunction()};
     
@@ -49,6 +51,14 @@ $(function() {
       var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
+
+      console.log(scrolled);
+         if (scrolled >' 5' ) {
+            $(".nav-floating").css("display", "block");
+         } else if(scrolled <' 5' ){
+            $(".nav-floating").css("display", "none");
+
+         }
     } 
   </script> 
    </head>
@@ -62,7 +72,7 @@ $(function() {
          paginationSpeed : 800,
          
          //Autoplay
-         autoPlay : false,
+         autoPlay : true,
          goToFirst : true,
          
          goToFirstSpeed : 1000,
@@ -82,10 +92,9 @@ $(function() {
          itemsMobile : [479,1]
          
             });
-         $( ".owl-prev").html('<i class="fa-solid fa-arrow-left-long"></i>');
-         $( ".owl-next").html('<i class="fa-solid fa-arrow-right-long"></i>');
             });
       </script>
+       <!-- ========================================loader html ============================ -->
             <div class="loader" id="preloader">
                <div class="cube-wrapper">
                   <div class="cube-folding"> 
@@ -97,11 +106,8 @@ $(function() {
                      <span class="loading" data-name="Loading">Loading</span>
                </div>
             </div>
-
-      <div class="container-fluid px-0" id="home">
-               <!-- ========================================loader html ============================ -->
             <!-- ========================================end loader html ============================ -->
-
+      <div class="container-fluid px-0" id="home">
          <div class="banner" id="particles-js"></div>
          <div class="logo"><img src="images/h-logo.png" width="120px" alt="">
          </div>
@@ -164,7 +170,7 @@ $(function() {
       </div>
       <section class="content">
          <!-- ===========================================navbar======================================= -->
-         <div class="container-fluid px-0  bg-dark nav-floating d-block">
+         <div class="container-fluid px-0  bg-dark nav-floating ">
             <nav class="Navbar bg-dark">
                 <div class="Navbar-brand">
                   <img src="images/h-logo.png" width="120px" alt="">
@@ -319,6 +325,42 @@ $(function() {
             </div>
          </div>
       </div>
+      <!-- ==============================================project section=========================================== -->
+      <div class="conainer-fluid bg-dark">
+         <div class="row px-0 mx-0">
+            <div class="col-md-12">
+               <div class="container-1">
+                  <h2>Recent Projects</h2>
+                <div class="tabs-center">
+                   <ul class="tabs">
+                      <li class="tab-link current" data-tab="tab-1">Joomla</li>
+                      <li class="tab-link" data-tab="tab-2">WordPress</li>
+                      <li class="tab-link" data-tab="tab-3">Landing Page</li>
+                    <li class="tab-link" data-tab="tab-4">Laravel</li>
+                      <li class="tab-link" data-tab="tab-5">php</li>
+                   </ul>
+                </div>
+                   <div id="tab-1" class="tab-content current">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </div>
+                   <div id="tab-2" class="tab-content">
+                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </div>
+                   <div id="tab-3" class="tab-content">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                   </div>
+                   <div id="tab-4" class="tab-content">
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </div>
+                  <div id="tab-5" class="tab-content">
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </div>
+                
+                </div><!-- container -->
+            </div>
+         </div>
+      </div>
+      <!-- =======================================team section============================================= -->
       <div class="container-fluid px-0 skills bg-skills" id="team">
          <div class="container py-5">
             <div class="row m-0 d-flex pt-4 questo">
@@ -383,6 +425,7 @@ $(function() {
             </div>
          </div>
       </div>
+      <!-- ============================================end team section======================================== -->
    </section>
       <!-- =================================Scripts for particles==================================== -->
       <!-- scripts -->
@@ -428,19 +471,21 @@ $(function() {
          $(".questo").hover(function(e) {
              $(this).addClass('animate__animated animate__zoomIn animate__delay-0.5s animate__repeat-0', e.type === 'mouseenter');
          });
-//          $(".content").mouseover(function(){
-//   $(".nav-floating").toggleClass("d-block");
-// });
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-// window.onscroll = function() {scrollFunction(),myFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementsByClassName("nav-floating").style.top = "0";
-//   } else {
-//     document.getElementsByClassName("nav-floating").style.top = "-50px";
-//   }
-// }
-//       </script>
+         // PROJECT TABS JQUERY
+         $(document).ready(function(){
+          
+          $('ul.tabs li').click(function(){
+              var tab_id = $(this).attr('data-tab');
+      
+              $('ul.tabs li').removeClass('current');
+              $('.tab-content').removeClass('current');
+      
+              $(this).addClass('current');
+              $("#"+tab_id).addClass('current');
+          })
+      
+      })
+      </script>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->

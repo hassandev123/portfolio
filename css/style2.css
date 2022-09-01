@@ -278,7 +278,7 @@
         color: #ffffff;
     }
     .service-card span{
-        font-size: 26px;
+        font-size: 16px;
     }
     
     .image {
@@ -340,6 +340,49 @@
     .bg-skills{
         background: #181818;
     }
+
+    /* project section css */
+
+    .container-1 h2{
+        text-align:center;
+        font-size:40px;
+      }
+      .tabs-center{
+        display:flex;
+        justify-content:center;
+      }
+      
+      
+      .tabs-center   ul.tabs{
+                  margin: 0px;
+                  padding: 0px;
+                  list-style: none;
+              }
+              .tabs-center  ul.tabs li{
+                  background: none;
+                  color: #f9e900;
+                  display: inline-block;
+                  padding: 10px 15px;
+                  cursor: pointer;
+                  font-size: 30px;
+              }
+      
+              .tabs-center     ul.tabs li.current{
+                  background: transparent;
+                  color: #fff;
+                  border-bottom:2px solid #f9e900;
+              }
+      
+              .tab-content{
+                  display: none;
+                  background: transparent;
+                  padding: 15px;
+              }
+      
+              .tab-content.current{
+                  display: inherit;
+              }
+     
     @media screen and (max-width: 1200px) {
         .heading-family{
             font-size: 80px !important;
